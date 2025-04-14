@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Peso ideal</title>
+        <script src="js/funciones.js"></script>
+        <link  rel="stylesheet" href="css/estilos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="img/logo_128x128.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+                    Peso ideal
+                  </a>
+                </div>
+              </nav>
+     
+        <!-- Formulario -->
+        <div>
+            <div class="alert alert-primary" role="alert">
+                Complete los datos indicados para poder calcular el peso ideal en base a la fórmula edad * 2 + 8. 
+                Esto sólo aplica para niños con edad entre 1 y 10.
+            </div>
+           <!-- Tarjeta para formulario-->
+           <div class="card">
+            <div class="card-header">Ingreso de datos</div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                    <label for="txt_edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="txt_edad" aria-describedby="txt_edad_help">
+                    <div id="txt_edad_help" class="form-text">Ingrese edad entre 1 y 10</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt_peso_actual" class="form-label">Peso Actual</label>
+                        <input type="number" class="form-control" id="txt_peso_actual" aria-describedby="txt_peso_actual_help">
+                        <div id="txt_peso_actual_help" class="form-text">Ingrese el peso actual</div>
+                    </div>
+                
+                  <input type="button" value="Calcular" class="btn btn-primary btn-lg" onclick="calcularPesoIdeal();">
+              </form>
+            </div>
+      
+            </div>
+            <!--Contenedor para mostrar peso ideal-->
+            <div id="cnt_peso_ideal"></div>
+            <!--Contenedor para mostrar estado de peso -->
+            <div id="cnt_estado_peso"></div>
+            <!--Contenedor para mostrar imagen alusiva -->
+            <div id="cnt_estado_imagen"></div>            
+        </div>
+    </div>
+    </body>
+</html>
